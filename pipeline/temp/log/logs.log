@@ -1,0 +1,117 @@
+2026-03-19 16:58:52,193 - INFO - ==================================STARTING EXTRACT DATA=======================================
+2026-03-19 16:58:52,258 - INFO - EXTRACT 'aircrafts' - SUCCESS.
+2026-03-19 16:58:52,275 - INFO - EXTRACT 'airlines' - SUCCESS.
+2026-03-19 16:58:52,287 - INFO - EXTRACT 'airports' - SUCCESS.
+2026-03-19 16:58:52,305 - INFO - EXTRACT 'customers' - SUCCESS.
+2026-03-19 16:58:52,336 - INFO - EXTRACT 'hotel' - SUCCESS.
+2026-03-19 16:58:52,462 - INFO - EXTRACT 'flight_bookings' - SUCCESS.
+2026-03-19 16:58:52,477 - INFO - EXTRACT 'hotel_bookings' - SUCCESS.
+2026-03-19 16:58:52,477 - INFO - Extract All Tables From Sources - SUCCESS
+2026-03-19 16:58:52,482 - INFO - ==================================ENDING EXTRACT DATA=======================================
+2026-03-19 16:58:52,483 - INFO - [pid 22552] Worker Worker(salt=7090765046, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=22552) done      Extract()
+2026-03-19 16:58:52,484 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-19 16:58:52,490 - INFO - Informed scheduler that task   Extract__99914b932b   has status   DONE
+2026-03-19 16:58:52,491 - DEBUG - Asking scheduler for work...
+2026-03-19 16:58:52,502 - DEBUG - Pending tasks: 2
+2026-03-19 16:58:52,502 - INFO - [pid 22552] Worker Worker(salt=7090765046, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=22552) running   Load()
+2026-03-19 16:58:52,506 - INFO - Read Load Query - SUCCESS
+2026-03-19 16:58:52,561 - INFO - Read Extracted Data - SUCCESS
+2026-03-19 16:58:52,562 - INFO - Connect to DWH - SUCCESS
+2026-03-19 16:58:52,563 - INFO - Engine(postgresql://postgres:***@localhost:5434/pactravel-dwh)
+2026-03-19 16:58:52,768 - INFO - Truncate pactravel Schema in DWH - SUCCESS
+2026-03-19 16:58:52,769 - INFO - ==================================STARTING LOAD DATA=======================================
+2026-03-19 16:58:52,838 - INFO - LOAD 'pactravel.aircrafts' - SUCCESS
+2026-03-19 16:58:52,991 - INFO - LOAD 'pactravel.airlines' - SUCCESS
+2026-03-19 16:58:53,052 - INFO - LOAD 'pactravel.airports' - SUCCESS
+2026-03-19 16:58:53,216 - INFO - LOAD 'pactravel.customers' - SUCCESS
+2026-03-19 16:58:53,353 - INFO - LOAD 'pactravel.hotel' - SUCCESS
+2026-03-19 16:58:53,423 - INFO - LOAD 'pactravel.hotel_bookings' - SUCCESS
+2026-03-19 16:58:54,503 - INFO - LOAD 'pactravel.flight_bookings' - SUCCESS
+2026-03-19 16:58:54,503 - INFO - LOAD All Tables To DWH-pactravel - SUCCESS
+2026-03-19 16:58:54,507 - INFO - ==================================ENDING LOAD DATA=======================================
+2026-03-19 16:58:54,508 - INFO - [pid 22552] Worker Worker(salt=7090765046, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=22552) done      Load()
+2026-03-19 16:58:54,509 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-19 16:58:54,515 - INFO - Informed scheduler that task   Load__99914b932b   has status   DONE
+2026-03-19 16:58:54,516 - DEBUG - Asking scheduler for work...
+2026-03-19 16:58:54,521 - DEBUG - Pending tasks: 1
+2026-03-19 16:58:54,522 - INFO - [pid 22552] Worker Worker(salt=7090765046, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=22552) running   Transform()
+2026-03-19 16:58:54,524 - INFO - ==================================STARTING TRANSFROM DATA=======================================
+09:58:58  Running with dbt=1.11.3
+09:58:59  Registered adapter: postgres=1.10.0
+09:59:01  Found 9 models, 4 data tests, 8 snapshots, 7 sources, 709 macros
+09:59:01  
+09:59:01  Concurrency: 1 threads (target='dev')
+09:59:01  
+09:59:02  1 of 9 START sql table model pactravel.my_first_dbt_model ...................... [RUN]
+09:59:02  1 of 9 OK created sql table model pactravel.my_first_dbt_model ................. [SELECT 2 in 0.23s]
+09:59:02  2 of 9 START sql view model pactravel.stg_dwh__aircrafts ....................... [RUN]
+09:59:02  2 of 9 OK created sql view model pactravel.stg_dwh__aircrafts .................. [CREATE VIEW in 0.17s]
+09:59:02  3 of 9 START sql view model pactravel.stg_dwh__airlines ........................ [RUN]
+09:59:02  3 of 9 OK created sql view model pactravel.stg_dwh__airlines ................... [CREATE VIEW in 0.13s]
+09:59:02  4 of 9 START sql view model pactravel.stg_dwh__airports ........................ [RUN]
+09:59:02  4 of 9 OK created sql view model pactravel.stg_dwh__airports ................... [CREATE VIEW in 0.22s]
+09:59:02  5 of 9 START sql view model pactravel.stg_dwh__customers ....................... [RUN]
+09:59:02  5 of 9 OK created sql view model pactravel.stg_dwh__customers .................. [CREATE VIEW in 0.12s]
+09:59:02  6 of 9 START sql view model pactravel.stg_dwh__flight_bookings ................. [RUN]
+09:59:03  6 of 9 OK created sql view model pactravel.stg_dwh__flight_bookings ............ [CREATE VIEW in 0.13s]
+09:59:03  7 of 9 START sql view model pactravel.stg_dwh__hotel ........................... [RUN]
+09:59:03  7 of 9 OK created sql view model pactravel.stg_dwh__hotel ...................... [CREATE VIEW in 0.13s]
+09:59:03  8 of 9 START sql view model pactravel.stg_dwh__hotel_bookings .................. [RUN]
+09:59:03  8 of 9 OK created sql view model pactravel.stg_dwh__hotel_bookings ............. [CREATE VIEW in 0.11s]
+09:59:03  9 of 9 START sql view model pactravel.my_second_dbt_model ...................... [RUN]
+09:59:03  9 of 9 OK created sql view model pactravel.my_second_dbt_model ................. [CREATE VIEW in 0.11s]
+09:59:03  
+09:59:03  Finished running 1 table model, 8 view models in 0 hours 0 minutes and 1.98 seconds (1.98s).
+09:59:03  
+09:59:03  Completed successfully
+09:59:03  
+09:59:03  Done. PASS=9 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=9
+09:59:10  Running with dbt=1.11.3
+09:59:10  Registered adapter: postgres=1.10.0
+09:59:11  Found 9 models, 4 data tests, 8 snapshots, 7 sources, 709 macros
+09:59:11  
+09:59:11  Concurrency: 1 threads (target='dev')
+09:59:11  
+09:59:12  1 of 8 START snapshot final.dim_airlines ....................................... [RUN]
+09:59:12  1 of 8 OK snapshotted final.dim_airlines ....................................... [SELECT 1251 in 0.29s]
+09:59:12  2 of 8 START snapshot final.dim_airports ....................................... [RUN]
+09:59:12  2 of 8 OK snapshotted final.dim_airports ....................................... [SELECT 105 in 0.11s]
+09:59:12  3 of 8 START snapshot final.dim_hotel .......................................... [RUN]
+09:59:12  3 of 8 OK snapshotted final.dim_hotel .......................................... [SELECT 1470 in 0.11s]
+09:59:12  4 of 8 START snapshot final.fct_fly_booking_record_eachday ..................... [RUN]
+09:59:13  4 of 8 OK snapshotted final.fct_fly_booking_record_eachday ..................... [SELECT 2358 in 0.13s]
+09:59:13  5 of 8 START snapshot final.fct_hotel_booking_record_eachday ................... [RUN]
+09:59:13  5 of 8 OK snapshotted final.fct_hotel_booking_record_eachday ................... [SELECT 190 in 0.10s]
+09:59:13  6 of 8 START snapshot final.fct_airlines_record_eachday ........................ [RUN]
+09:59:13  6 of 8 OK snapshotted final.fct_airlines_record_eachday ........................ [SELECT 7657 in 0.18s]
+09:59:13  7 of 8 START snapshot final.fct_airports_record_eachday ........................ [RUN]
+09:59:13  7 of 8 OK snapshotted final.fct_airports_record_eachday ........................ [SELECT 7824 in 0.20s]
+09:59:13  8 of 8 START snapshot final.fct_hotel_record_eachday ........................... [RUN]
+09:59:13  8 of 8 OK snapshotted final.fct_hotel_record_eachday ........................... [SELECT 217 in 0.12s]
+09:59:13  
+09:59:13  Finished running 8 snapshots in 0 hours 0 minutes and 1.83 seconds (1.83s).
+09:59:13  
+09:59:13  Completed successfully
+09:59:13  
+09:59:13  Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=8
+2026-03-19 16:59:16,864 - INFO - ==================================ENDING TRANSFROM DATA=======================================
+2026-03-19 16:59:16,864 - INFO - [pid 22552] Worker Worker(salt=7090765046, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=22552) done      Transform()
+2026-03-19 16:59:16,865 - DEBUG - 1 running tasks, waiting for next task to finish
+2026-03-19 16:59:16,871 - INFO - Informed scheduler that task   Transform__99914b932b   has status   DONE
+2026-03-19 16:59:16,872 - DEBUG - Asking scheduler for work...
+2026-03-19 16:59:16,878 - DEBUG - Done
+2026-03-19 16:59:16,878 - DEBUG - There are no more tasks to run at this time
+2026-03-19 16:59:16,879 - INFO - Worker Worker(salt=7090765046, workers=1, host=DESKTOP-91JU2RU, username=Asus, pid=22552) was stopped. Shutting down Keep-Alive thread
+2026-03-19 16:59:16,881 - INFO - 
+===== Luigi Execution Summary =====
+
+Scheduled 3 tasks of which:
+* 3 ran successfully:
+    - 1 Extract()
+    - 1 Load()
+    - 1 Transform()
+
+This progress looks :) because there were no failed tasks or missing dependencies
+
+===== Luigi Execution Summary =====
+

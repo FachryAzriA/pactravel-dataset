@@ -1,0 +1,35 @@
+[0m23:04:40.985850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8319C93F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B833C4FDC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B833C4FBE0>]}
+
+
+============================== 23:04:40.995185 | b5953adc-10d8-4ae0-b0eb-c1d55532aece ==============================
+[0m23:04:40.995185 [info ] [MainThread]: Running with dbt=1.11.3
+[0m23:04:40.996979 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:04:41.088821 [info ] [MainThread]: dbt version: 1.11.3
+[0m23:04:41.090821 [info ] [MainThread]: python version: 3.10.6
+[0m23:04:41.092820 [info ] [MainThread]: python path: C:\laragon\bin\python\python-3.10\python.exe
+[0m23:04:41.093825 [info ] [MainThread]: os info: Windows-10-10.0.19045-SP0
+[0m23:04:41.283196 [info ] [MainThread]: Using profiles dir at C:\Users\Asus\.dbt
+[0m23:04:41.285195 [info ] [MainThread]: Using profiles.yml file at C:\Users\Asus\.dbt\profiles.yml
+[0m23:04:41.287196 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\Asus\OneDrive\Dokumen\GitHub\pactravel-dataset\dbt_project.yml
+[0m23:04:41.289967 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m23:04:41.294967 [debug] [MainThread]: Command `dbt debug` failed at 23:04:41.294967 after 0.51 seconds
+[0m23:04:41.297970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8319C93F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B833C3E260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B833BD2D40>]}
+[0m23:04:41.299968 [debug] [MainThread]: Flushing usage events
+[0m23:04:44.061284 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:24:56.884877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000168D3949390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000168D4BFFD30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000168D4BFFB50>]}
+
+
+============================== 23:24:56.907614 | 014df867-92f9-46f3-b885-48e26333ef6b ==============================
+[0m23:24:56.907614 [info ] [MainThread]: Running with dbt=1.11.3
+[0m23:24:56.915167 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Asus\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt deps', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:24:56.923801 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\Asus\OneDrive\Dokumen\GitHub\pactravel-dataset\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:24:56.933056 [debug] [MainThread]: Command `dbt deps` failed at 23:24:56.931355 after 0.37 seconds
+[0m23:24:56.939595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000168D3949390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000168D4BFF310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000168D4BFF3A0>]}
+[0m23:24:56.947594 [debug] [MainThread]: Flushing usage events
+[0m23:24:58.937858 [debug] [MainThread]: An error was encountered while trying to flush usage events
